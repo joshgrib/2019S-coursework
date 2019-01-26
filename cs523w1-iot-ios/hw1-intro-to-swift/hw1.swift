@@ -18,15 +18,30 @@ func ex1() -> Bool {
   return true
 }
 
-func getRunningStatus() -> String {
-  return "Hey"
+func getRunningStatus(weather: Int, schedule: Int, likeRunning: Int) -> String {
+  let goingText = "Going for a Run"
+  let notGoingText = "Not going for a Run"
+  // find all the reasons not to run
+  let notEnoughInterest = likeRunning < 4
+  let tooBusy = schedule > 2
+  let badWeather = weather<=45 || weather>=90
+  //return the text
+  if (notEnoughInterest || tooBusy || badWeather) {
+    return notGoingText
+  }
+  return goingText
 }
 
 func ex2() -> Bool {
-  let Weather = 20
+  let Weather = 70
   let Schedule = 0
-  let LikeRunning = 0
-  print(getRunningStatus())
+  let LikeRunning = 6
+  let runningStatus = getRunningStatus(
+    weather: Weather,
+    schedule: Schedule,
+    likeRunning: LikeRunning
+  )
+  print(runningStatus)
   return true
 }
 
@@ -51,7 +66,7 @@ func ex3() -> Bool {
 
 print()
 print("Exercise 1:")
-ex1()
+//ex1()
 
 print()
 print("Execise 2:")
