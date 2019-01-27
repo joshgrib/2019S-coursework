@@ -1,3 +1,9 @@
+/*
+Josh Gribbon
+Assignment 1 - Intro to Swift
+*/
+
+// Execise 1 - Loan Balance
 func ex1() -> Bool {
   let loanAmount: Double = 1000.0
   var remaining: Double = loanAmount
@@ -18,6 +24,7 @@ func ex1() -> Bool {
   return true
 }
 
+// helper method for exercise 2
 func getRunningStatus(weather: Int, schedule: Int, likeRunning: Int) -> String {
   let goingText = "Going for a Run"
   let notGoingText = "Not going for a Run"
@@ -32,6 +39,7 @@ func getRunningStatus(weather: Int, schedule: Int, likeRunning: Int) -> String {
   return goingText
 }
 
+// Exercise 2 - Running Status
 func ex2() -> Bool {
   let Weather = 70
   let Schedule = 0
@@ -45,6 +53,7 @@ func ex2() -> Bool {
   return true
 }
 
+// Exercise 3 - Fastest Runner
 func ex3() -> Bool {
   let runnerSpeeds: [String: Int] = [
     "Elena": 341, "Thomas": 273, "Hamilton": 278, "Suzie": 329, 
@@ -66,7 +75,7 @@ func ex3() -> Bool {
 
 print()
 print("Exercise 1:")
-//ex1()
+ex1()
 
 print()
 print("Execise 2:")
