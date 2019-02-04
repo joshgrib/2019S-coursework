@@ -18,28 +18,165 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CalculatorDisplay" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eqg-Ok-flf">
-                                <rect key="frame" x="16" y="27" width="343" height="56"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4d-KR-7vk">
+                                <rect key="frame" x="16" y="543" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="0"/>
+                                <connections>
+                                    <action selector="ZeroButtonClick:" destination="BYZ-38-t0r" eventType="touchDown" id="dWd-ME-6XV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cR6-q2-vig">
+                                <rect key="frame" x="16" y="455" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="1"/>
+                                <connections>
+                                    <action selector="OneButtonClick:" destination="BYZ-38-t0r" eventType="touchDown" id="v9Z-G0-DIF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fIz-O6-9kp">
+                                <rect key="frame" x="103" y="455" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="2"/>
+                                <connections>
+                                    <action selector="TwoButtonClick:" destination="BYZ-38-t0r" eventType="touchDown" id="or2-Id-3eW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pPx-HZ-pzJ">
+                                <rect key="frame" x="191" y="455" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="3"/>
+                                <connections>
+                                    <action selector="ThreeButtonClick:" destination="BYZ-38-t0r" eventType="touchDown" id="rFe-wp-69V"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rJN-sE-fLQ">
+                                <rect key="frame" x="16" y="367" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="4"/>
+                                <connections>
+                                    <action selector="FourButtonClick:" destination="BYZ-38-t0r" eventType="touchDown" id="3KQ-aQ-aFj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAg-T3-5H1">
+                                <rect key="frame" x="103" y="367" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="5"/>
+                                <connections>
+                                    <action selector="FiveButtonClick:" destination="BYZ-38-t0r" eventType="touchDown" id="Mwl-ig-EH2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQs-VJ-xsz">
+                                <rect key="frame" x="191" y="367" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="6"/>
+                                <connections>
+                                    <action selector="SixButtonClick:" destination="BYZ-38-t0r" eventType="touchDown" id="LgN-uH-ksP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H4J-oK-Syi">
+                                <rect key="frame" x="16" y="279" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="7"/>
+                                <connections>
+                                    <action selector="SevenButtonClick:" destination="BYZ-38-t0r" eventType="touchDown" id="1eV-xO-whB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQS-qq-8dE">
+                                <rect key="frame" x="103" y="279" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="8"/>
+                                <connections>
+                                    <action selector="EightButtonClick:" destination="BYZ-38-t0r" eventType="touchDown" id="DB5-L1-ihK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zZc-tk-tjx">
+                                <rect key="frame" x="191" y="279" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="9"/>
+                                <connections>
+                                    <action selector="NineButtonClick:" destination="BYZ-38-t0r" eventType="touchDown" id="eHL-3d-uhX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7X-Y1-UpM">
+                                <rect key="frame" x="279" y="455" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="-"/>
+                                <connections>
+                                    <action selector="MinusButtonClick:" destination="BYZ-38-t0r" eventType="touchDown" id="X33-CF-gUA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1wb-RK-Ea6">
+                                <rect key="frame" x="279" y="367" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="/"/>
+                                <connections>
+                                    <action selector="DivideButtonClick:" destination="BYZ-38-t0r" eventType="touchDown" id="XUe-f6-9ep"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xks-t0-Qfa">
+                                <rect key="frame" x="279" y="279" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="*"/>
+                                <connections>
+                                    <action selector="MultipleButtonClick:" destination="BYZ-38-t0r" eventType="touchDown" id="W2z-Iv-lVF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UhZ-sp-gOk">
+                                <rect key="frame" x="103" y="543" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="="/>
+                                <connections>
+                                    <action selector="EqualsButtonClick:" destination="BYZ-38-t0r" eventType="touchDown" id="MWz-NI-khW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oDJ-g6-Zhp">
+                                <rect key="frame" x="191" y="543" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="C"/>
+                                <connections>
+                                    <action selector="ClearButtonClick:" destination="BYZ-38-t0r" eventType="touchDown" id="onS-JV-QcK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cle-1D-Qxi">
+                                <rect key="frame" x="279" y="543" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="PlusButtonClick:" destination="BYZ-38-t0r" eventType="touchDown" id="dNm-38-pkH"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Math" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eqg-Ok-flf">
+                                <rect key="frame" x="16" y="146" width="343" height="125"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4d-KR-7vk">
-                                <rect key="frame" x="90" y="118" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="ButtonClick:" destination="BYZ-38-t0r" eventType="touchDown" id="W81-8a-KpX"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="Button" destination="F4d-KR-7vk" id="4Mo-yj-Hzp"/>
                         <outlet property="CalculatorDisplay" destination="Eqg-Ok-flf" id="UTa-1G-KsZ"/>
+                        <outlet property="ClearButton" destination="oDJ-g6-Zhp" id="4B7-67-U7T"/>
+                        <outlet property="DivideButton" destination="1wb-RK-Ea6" id="NQZ-1y-rWa"/>
+                        <outlet property="EightButton" destination="rQS-qq-8dE" id="29E-KJ-VIz"/>
+                        <outlet property="EqualsButton" destination="UhZ-sp-gOk" id="32I-9w-qis"/>
+                        <outlet property="FiveButton" destination="aAg-T3-5H1" id="0Pe-sf-jbi"/>
+                        <outlet property="FourButton" destination="rJN-sE-fLQ" id="iEq-oh-Lk1"/>
+                        <outlet property="MinusButton" destination="D7X-Y1-UpM" id="Dwo-8a-K6z"/>
+                        <outlet property="MultiplyButton" destination="xks-t0-Qfa" id="YOw-8A-E1Z"/>
+                        <outlet property="NineButton" destination="zZc-tk-tjx" id="h2x-a6-AP1"/>
+                        <outlet property="OneButton" destination="cR6-q2-vig" id="Zjb-2X-d8b"/>
+                        <outlet property="PlusButton" destination="Cle-1D-Qxi" id="YfY-TE-ah7"/>
+                        <outlet property="SevenButton" destination="H4J-oK-Syi" id="m2b-BH-QLe"/>
+                        <outlet property="SixButton" destination="eQs-VJ-xsz" id="fnC-y8-ag7"/>
+                        <outlet property="ThreeButton" destination="pPx-HZ-pzJ" id="x17-ZA-IZL"/>
+                        <outlet property="TwoButton" destination="fIz-O6-9kp" id="zXw-i6-nCU"/>
+                        <outlet property="ZeroButton" destination="F4d-KR-7vk" id="PSO-UM-2xd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
