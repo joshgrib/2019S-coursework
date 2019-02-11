@@ -1,0 +1,31 @@
+Azure vs AWS for e-commerce
+===========================
+
+Assumptions
+-----------
+* The solution should be using a cloud vendor exclusively
+* The solution is fully cloud hosted
+
+Similarities
+------------
+* Both have e-commerce pages
+    * https://azure.microsoft.com/en-us/solutions/ecommerce
+    * https://aws.amazon.com/ecommerce-applications
+* Both have many different product/service offerings that are meant to integrate with each other
+* High quality machines, networking, storage, general abilities
+* Costs are fairly similar for most architectures
+
+Major Differences
+-----------------
+* AWS
+    * Has been around longer - more offerings and track record
+    * More diverse machine options
+    * Better at complex customized solutions
+    * Better for using non-Windows machines
+    * Leader by revenue - around four times that of Azure
+* Azure
+    * Better for hybrid cloud
+    * It's Microsoft so it works well with their other products
+    * Better for standard use case solutions
+    * Better developer tooling
+    * More data center locations
