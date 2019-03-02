@@ -1,0 +1,26 @@
+[
+    {
+        "heroName": "Superman",
+        "name": "Clark Kent"
+    },
+    {
+        "heroName": "Batman",
+        "name": "Bruce Wayne"
+    },
+    {
+        "heroName": "Wonder Woman",
+        "name": "Princess Diana"
+    },
+    {
+        "heroName": "The Flash",
+        "name": "Barry Allen"
+    },
+    {
+        "heroName": "Green Lantern",
+        "name": "Hal Jordan"
+    },
+    {
+        "heroName": "Aquaman",
+        "name": "Arthur Curry"
+    }
+]
