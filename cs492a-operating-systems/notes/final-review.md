@@ -10,7 +10,7 @@
   * Second half of the material (after spring break)
     * No lab questions, only material from the book and non Linux slides
   * ~75% of the grade
-* 10th of May 2019, at 9:30am – Duration 1h30m
+* 10th of May 2019, at 9:30am – Duration ~1h30m
   *  Section A in P120
 
 ## First Half
@@ -91,26 +91,65 @@ Problems with programs on physical memory
 * If there's not an open spot then at least one page also needs to get removed
 
 ##### Translation Lookaside Buffer
+* Memory cache that is used to reduce the time taken to access a user memory location
+* Part of the chip's MMU
 
 ##### Multilevel Page Tables
+* 2 levels of page tables
+* Memory addresses include two page table identifiers and then an offset
+  * E.g. `0x11aa1234` = page table entry `11` -> page table entry `aa` -> address at offset `1234`
 
 ---
 
 ### Page Replacement Algorithms
+**When memory is full - what page to evict when we need to load a new one?**
+* Ideally minimize the amount of replacements
+* To test algo performance:
+  * Input: List of memory address references, size of memory, size of pages
+  * Output: Ammount of page faults
 
 #### Optimal Algorithm
+* **Idea:** The best that can possibly be done, knowing about all future references
+* **Algo:** Replace the page used furthest in the future
+  * Impractical - can't be done in any real system
 
 #### Not Recently Used
+* **Idea:** Use bits to track when pages are used, better to remove a page that hasn't been used recently than one that has been
+* **Algo:**
+  * R and M bits for all pages initially set to 0 by OS
+  * Periodically R bit is cleared
+  * When a fault occurs the following order is used to select a page
+    * Class 0: not referenced or modified
+    * Class 1: not referenced, modified
+    * Class 2: referenced, not modified
+    * Class 3: referenced and modified
 
 #### First In First Out
+* **Idea:** Every page gets a turn for the same amount of faults
+* **Algo:**
+  * Linked list of pages in the order they come into memory
 
 ##### Second Chance FIFO
+* **Idea:** FIFO, but also track usage
+* **Algo:**
+  * If a page isn't referenced recently remove it
+  * If it is, it get's another chance by getting moved to the end of the list
 
 #### Clock
+* **Idea:** Second chance FIFO requires moving pages around on the list, so instead we using a ring buffer
+* **Algo:**
+  * If the page is recently used the head of the list moves to the next item, putting the initial page at the end of the list
 
 #### Least Recently Used
+* **Idea:** The page that hasn't been used the longest is the safest to remove
+* **Algo:**
+  * Track the last time a page was used
+  * Remove the page used the longest time ago
 
-#### Aging
+##### Aging
+* N-bit counter for each page
+* Periodically shift counter to the right and add 1 to the leftmost bit
+* Replace the page with the lowest counter
 
 ---
 
@@ -134,6 +173,10 @@ Problems with programs on physical memory
 * **i-node**
 
 #### Hard and Soft Links
+* **Hard links** point to a file
+  * If it gets deleted the other references stop working
+* **Soft links** point to the address of a file
+  * Main owner can control the file
 
 ---
 
@@ -150,17 +193,48 @@ Problems with programs on physical memory
 #### Software and I/O interaction
 
 ##### Programmed I/O
+CPU does all the work
 
 ##### Interrupt-driven I/O
+CPU does the work, but interrupts say when
 
 ##### I/O using DMA
+DMA does the work, programmed by the CPU, which reacts to interrupts
 
 ---
 
 ### RAID
+* **RAID 0** - Striping
+* **RAID 1** - Mirroring
+* **RAID 2** - Bit-level striping with Hamming code for error checking
+* **RAID 3** - Bit-level striping with parity bit
+* **RAID 4** - Striping with parity
+* **RAID 5** - Striping with distributed parity
+* **RAID 6** - Striping with double distributed parity
 
 ---
 
 ## Practice problems
 > Only second half
 
+* Calculate the size of page tables
+* Calculate aging values for LRU given usage at each clock cycle
+* Calculate amount of page faults for an algorithm, input string, and page frame count
+* Calculate file size given disk block and block pointer sizes, and amount/type of nodes
+* Explain the best allocation scheme for a file given a usage pattern
+* Explain the best I/O pattern for a device - e.g. for a printer that prints at a certain rate
+* Calculate probability of RAID failure
+
+| Course Grade | Minimum Final Grade |
+| :-: | :-: |
+| 60 | 7.5 |
+| 65 | 27.5 |
+| 70 | 47.5 |
+| 75 | 67.5 |
+| 80 | 87.5 |
+| 83 | 99.5 |
+
+## TODO:
+* Work on page table size calculation
+  * And multilevel page tables
+* Work on RAID failure calculation
